@@ -33,11 +33,11 @@ void incluirIdentificacao(struct Identificacao *identificacao) {
 void incluirEndereco(struct Endereco *endereco) {
     printf("Digite a rua: ");
     fgets(endereco->rua, sizeof(endereco->rua), stdin);
-    endereco->rua[strcspn(endereco->rua, "\n")] = '\0'; // Remove a quebra de linha
+    endereco->rua[strcspn(endereco->rua, "\n")] = '\0'; 
 
     printf("Digite a cidade: ");
     fgets(endereco->cidade, sizeof(endereco->cidade), stdin);
-    endereco->cidade[strcspn(endereco->cidade, "\n")] = '\0'; // Remove a quebra de linha
+    endereco->cidade[strcspn(endereco->cidade, "\n")] = '\0'; 
 }
 
 void incluirVacina(struct Vacina *vacina) {
@@ -80,7 +80,7 @@ int main() {
         printf("5. Sair do programa\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
-        limparBuffer(); // Limpar buffer após a leitura da opcao
+        limparBuffer(); 
 
         switch (opcao) {
             case 1:
